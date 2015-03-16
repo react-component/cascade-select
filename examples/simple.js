@@ -40,7 +40,7 @@ class Component extends React.Component {
       allText="i want all"
       onChange={this.onChange.bind(this)}
       load={this.load}>
-      <select></select>
+      <span><select></select></span>
       <select></select>
       <select></select>
     </CascadeSelect>;

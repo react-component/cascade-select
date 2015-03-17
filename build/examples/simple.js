@@ -56,8 +56,10 @@ webpackJsonp([0,1],[
 	      value: this.state.value, 
 	      allText: "i want all", 
 	      onChange: this.onChange.bind(this), 
-	      load: this.load}, 
-	      React.createElement("span", null, React.createElement("select", null)), 
+	      loader: this.load}, 
+	      React.createElement("span", null, 
+	        React.createElement("select", null)
+	      ), 
 	      React.createElement("select", null), 
 	      React.createElement("select", null)
 	    );
@@ -66,7 +68,7 @@ webpackJsonp([0,1],[
 	
 	React.render(React.createElement("div", null, 
 	  React.createElement("h1", null, "simple cascade select"), 
-	  React.createElement(Component, null)
+	  React.createElement("div", null, React.createElement(Component, null))
 	), document.getElementById('__react-content'));
 
 
@@ -189,7 +191,7 @@ webpackJsonp([0,1],[
 	        callback();
 	        return;
 	      }
-	      self.props.load(id, function(error, data)  {
+	      self.props.loader(id, function(error, data)  {
 	        if (error) {
 	          callback(error);
 	          return;
@@ -228,7 +230,7 @@ webpackJsonp([0,1],[
 	
 	  Object.defineProperty(CascadeSelect.prototype,"componentDidMount",{writable:true,configurable:true,value:function() {
 	    var props = this.props;
-	    props.load(null, function(error, data) {
+	    props.loader(null, function(error, data) {
 	      if (error) {
 	        return;
 	      }
@@ -249,7 +251,7 @@ webpackJsonp([0,1],[
 	  Object.defineProperty(CascadeSelect.prototype,"render",{writable:true,configurable:true,value:function() {
 	    var props = this.props;
 	    var children = addOptions(this, props.children);
-	    return React.createElement("div", {className: props.className}, children);
+	    return React.createElement("span", {className: props.className}, children);
 	  }});
 	
 	
@@ -258,7 +260,7 @@ webpackJsonp([0,1],[
 	  allText: 'all',
 	  onChange:function() {
 	  },
-	  load:function() {
+	  loader:function() {
 	  }
 	};
 	

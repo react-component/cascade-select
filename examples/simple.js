@@ -39,8 +39,10 @@ class Component extends React.Component {
       value={this.state.value}
       allText="i want all"
       onChange={this.onChange.bind(this)}
-      load={this.load}>
-      <span><select></select></span>
+      loader={this.load}>
+      <span>
+        <select></select>
+      </span>
       <select></select>
       <select></select>
     </CascadeSelect>;
@@ -49,5 +51,5 @@ class Component extends React.Component {
 
 React.render(<div>
   <h1>simple cascade select</h1>
-  <Component />
+  <div><Component /></div>
 </div>, document.getElementById('__react-content'));

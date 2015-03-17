@@ -1,7 +1,7 @@
 # rc-cascade-select
 ---
 
-cascade-select ui component for react.    0.x is experimental!
+cascade-select ui component for react.
 
 [![NPM version][npm-image]][npm-url]
 [![SPM version](http://spmjs.io/badge/rc-cascade-select)](http://spmjs.io/package/rc-cascade-select)
@@ -48,6 +48,48 @@ npm start
 http://localhost:8000/examples/
 
 online example: http://react-component.github.io/cascade-select/build/examples/
+
+
+## Api
+
+### CascadeSelect props
+
+<table class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th style="width: 100px;">name</th>
+        <th style="width: 50px;">type</th>
+        <th style="width: 50px;">default</th>
+        <th>description</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>className</td>
+          <td>String</td>
+          <td></td>
+          <td>additional css class of root dom node</td>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>String[]</td>
+          <td>[]</td>
+          <td>current value like input's value</td>
+        </tr>
+        <tr>
+           <td>allText</td>
+           <td>String</td>
+           <td>all</td>
+           <td></td>
+         </tr>
+         <tr>
+            <td>loader</td>
+            <td>Function(value, callback:Function(error, data:Object[])</td>
+            <td></td>
+            <td>called when select a option, return children options corresponding to current option, data's child type must be type of {name,value}</td>
+          </tr>
+    </tbody>
+</table>
 
 ## Test Case
 

@@ -1,1 +1,3 @@
-module.exports = require('./lib/CascadeSelect');
+'use strict';
+
+module.exports = require('./src/');

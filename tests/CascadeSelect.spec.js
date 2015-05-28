@@ -1,3 +1,5 @@
+'use strict';
+
 var React = require('react/addons');
 var expect = require('expect.js');
 var CascadeSelect = require('../');

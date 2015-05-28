@@ -1,4 +1,5 @@
-/** @jsx React.DOM */
+'use strict';
+
 // use jsx to render html, do not modify simple.html
 var CascadeSelect = require('rc-cascade-select');
 var React = require('react');

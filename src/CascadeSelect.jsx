@@ -37,9 +37,9 @@ function addOptions(self, children) {
   var i = 0;
   var value = self.props.value;
   var parentData = self.state.data;
-  var doIt = (children) => {
+  var doIt = (doChildren) => {
     // depth first
-    return React.Children.map(children, (c) => {
+    return React.Children.map(doChildren, (c) => {
       if (c.type === 'select') {
         var newProps = {};
         var v = value[i] || '';
@@ -89,12 +89,12 @@ function complementTreeByValue(self, data, value) {
         callback();
         return;
       }
-      self.props.loader(id, (error, data) => {
+      self.props.loader(id, (error, ret) => {
         if (error) {
           callback(error);
           return;
         }
-        node.children = data;
+        node.children = ret;
         callback();
       });
     }, ()=> {
